@@ -1,0 +1,50 @@
+{
+  "name": "solver-app",
+  "version": "1.0.0",
+  "description": "Suguru puzzle solver application using Electron.",
+  "main": "build/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && electron .",
+    "watch": "tsc --watch",
+    "build": "tsc && electron-builder"
+  },
+  "keywords": [
+    "suguru",
+    "puzzle",
+    "solver-app"
+  ],
+  "build": {
+    "appId": "com.wyntine.solverapp",
+    "productName": "SolverApp",
+    "files": [
+      "build/**/*",
+      "views/**/*",
+      "dist/icons/**/*"
+    ],
+    "directories": {
+      "buildResources": "dist"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
+  "prettier": "@wyntine/prettier-config",
+  "author": "Wyntine",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.7.5",
+    "@wyntine/prettier-config": "^1.1.1",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.7",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "./node_modules/@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "removeComments": true,
+    "moduleResolution": "Bundler",
+    "module": "ES2015",
+    "types": ["node"],
+    "lib": ["ESNext", "DOM"],
+    "outDir": "build",
+    "sourceMap": true,
+    "declarationMap": true,
+    "declaration": true
+  },
+  "include": ["src/**/*.ts"]
+}

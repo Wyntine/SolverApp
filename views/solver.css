@@ -1,0 +1,140 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --cellSize: 120px;
+  --cellWidth: 15px;
+  --borderColor: rgba(211, 211, 211, 0.049);
+  --hoverColor: rgba(211, 211, 211, 0.26);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+table {
+  padding: 0px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+td {
+  height: var(--cellSize);
+  width: var(--cellSize);
+  border: 3px hidden black;
+  padding: 0px;
+  empty-cells: show;
+  outline: none;
+  caret-color: transparent;
+}
+
+.vertBorder {
+  height: var(--cellSize);
+  width: var(--cellWidth);
+  background-color: var(--borderColor);
+}
+
+.horzBorder {
+  height: var(--cellWidth);
+  width: var(--cellSize);
+  background-color: var(--borderColor);
+}
+
+.vertBorder:hover,
+.horzBorder:hover {
+  background-color: var(--hoverColor);
+}
+
+.cell {
+  text-align: center;
+  font-size: 300%;
+  color: orange;
+}
+
+.cell:hover {
+  background-color: var(--hoverColor);
+}
+
+.pointBorder {
+  height: var(--cellWidth);
+  width: var(--cellWidth);
+  background-color: var(--borderColor);
+}
+
+.groupBorder {
+  background-color: darkblue;
+}
+
+.noHover {
+  pointer-events: none;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer */
+}
+
+input[type="number"] {
+  width: 30px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+input[type="number"]:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}

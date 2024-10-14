@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="solver.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solver App</title>
+  </head>
+  <body>
+    <h2>Solver App</h2>
+    <div class="container">
+      <div>
+        <label class="no-select" for="columns">Columns:</label>
+        <input type="number" id="columns" value="3" min="3" />
+
+        <label class="no-select" for="rows">Rows:</label>
+        <input type="number" id="rows" value="3" min="3" />
+      </div>
+
+      <div>
+        <button id="createButton">Create</button>
+        <button id="clearButton">Clear</button>
+        <button id="solveButton">Solve</button>
+      </div>
+
+      <table id="clickableTable"></table>
+    </div>
+    <div>
+      <h2>Logging</h2>
+      <div>
+        <label class="no-select" for="rows">Step Wait Time (ms):</label>
+        <input type="number" id="waitTime" value="0" min="0" />
+      </div>
+
+      <div>
+        <label class="no-select">
+          <input type="checkbox" id="logCheckbox" />
+          Enable Logging (Developer Tools)
+        </label>
+      </div>
+    </div>
+
+    <script type="module" src="../build/pages/buttonRenderer.js" defer></script>
+  </body>
+</html>
