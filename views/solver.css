@@ -83,6 +83,7 @@ td {
 .cell {
   text-align: center;
   font-size: 300%;
+  font-weight: bold;
   color: orange;
 }
 
@@ -97,7 +98,7 @@ td {
 }
 
 .groupBorder {
-  background-color: darkblue;
+  background-color: rgb(69, 69, 248);
 }
 
 .noHover {
